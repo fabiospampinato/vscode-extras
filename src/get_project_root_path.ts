@@ -35,7 +35,8 @@ const getProjectRootPath = (): string | undefined => {
 
     /* FIND UP UNTIL GIT */
 
-    const gitPath = findUpPath ( '.git' );
+    const parentPath = path.dirname ( activeTextEditorPath );
+    const gitPath = findUpPath ( '.git', parentPath );
 
     if ( gitPath ) {
 
