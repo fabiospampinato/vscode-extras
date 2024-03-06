@@ -3,39 +3,34 @@
 
 import findUpPath from 'find-up-path';
 import path from 'node:path';
-import vscode from 'vscode';
 import {isInsidePath} from './utils';
+import getActiveFilePath from './get_active_file_path';
+import getProjectRootPaths from './get_project_root_paths';
 
 /* MAIN */
 
 const getProjectRootPath = (): string | undefined => {
 
-  const {activeTextEditor} = vscode.window;
-  const {workspaceFolders} = vscode.workspace;
+  const filePath = getActiveFilePath ();
+  const folderPaths = getProjectRootPaths ();
 
-  const activeTextEditorPath = activeTextEditor?.document.uri.fsPath;
-
-  if ( activeTextEditorPath && !activeTextEditor.document.isUntitled ) {
+  if ( filePath ) {
 
     /* FIND UP UNTIL WORKSPACE */
 
-    if ( workspaceFolders ) {
+    for ( const folderPath of folderPaths ) {
 
-      for ( const workspaceFolder of workspaceFolders ) {
+      if ( isInsidePath ( filePath, folderPath ) ) {
 
-        const workspaceFolderPath = workspaceFolder.uri.fsPath;
-
-        if ( !isInsidePath ( activeTextEditorPath, workspaceFolderPath ) ) continue;
-
-        return workspaceFolderPath;
+        return folderPath;
 
       }
 
     }
 
-    /* FIND UP UNTIL GIT */
+    /* FIND UP UNTIL .GIT */
 
-    const parentPath = path.dirname ( activeTextEditorPath );
+    const parentPath = path.dirname ( filePath );
     const gitPath = findUpPath ( '.git', parentPath );
 
     if ( gitPath ) {
@@ -44,11 +39,21 @@ const getProjectRootPath = (): string | undefined => {
 
     }
 
+    /* FIND UP UNTIL PACKAGE.JSON */
+
+    const packagePath = findUpPath ( 'package.json', parentPath );
+
+    if ( packagePath ) {
+
+      return path.dirname ( packagePath );
+
+    }
+
   }
 
   /* FALLBACK */
 
-  return workspaceFolders?.[0].uri.fsPath;
+  return folderPaths[0];
 
 };
 
