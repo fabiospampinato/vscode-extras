@@ -30,6 +30,16 @@ import {getProjectRootPath} from 'vscode-extras';
 const rootPath = getProjectRootPath ();
 ```
 
+#### `isInsiders`
+
+Check if the current instance of vscode is the insiders one.
+
+```ts
+import {isInsiders} from 'vscode-extras';
+
+const insiders = isInsiders ();
+```
+
 ## License
 
 MIT © Fabio Spampinato
