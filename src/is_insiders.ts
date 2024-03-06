@@ -7,7 +7,7 @@ import vscode from 'vscode';
 
 const isInsiders = (): boolean => {
 
-  return !!vscode.env.appName.match ( /insiders/i );
+  return /insiders/i.test ( vscode.env.appName );
 
 };
 
