@@ -30,6 +30,16 @@ import {getProjectRootPath} from 'vscode-extras';
 const rootPath = getProjectRootPath ();
 ```
 
+#### `getProjectRootPaths`
+
+Get all the root paths that make up the current workspace.
+
+```ts
+import {getProjectRootPaths} from 'vscode-extras';
+
+const rootPaths = getProjectRootPaths ();
+```
+
 #### `isInsiders`
 
 Check if the current instance of vscode is the insiders one.
