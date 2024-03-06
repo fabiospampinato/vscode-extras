@@ -1,7 +1,7 @@
 {
   "name": "vscode-extras",
   "repository": "github:fabiospampinato/vscode-extras",
-  "description": "A collection of utilities for development vscode extensions.",
+  "description": "A collection of utilities for developing vscode extensions.",
   "version": "1.1.0",
   "type": "module",
   "sideEffects": false,

@@ -1,6 +1,6 @@
 # VSCode Extras
 
-A collection of utilities for development vscode extensions.
+A collection of utilities for developing vscode extensions.
 
 ## Install
 
@@ -12,7 +12,7 @@ npm install --save vscode-extras
 
 #### `getActiveFilePath`
 
-Get the path of the currently active file, which could be a textual or binary file.
+Get the path of the currently active file, which could be either a textual or binary file.
 
 ```ts
 import {getActiveFilePath} from 'vscode-extras';
