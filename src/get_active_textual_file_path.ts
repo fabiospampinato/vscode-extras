@@ -5,7 +5,7 @@ import vscode from 'vscode';
 
 /* MAIN */
 
-const getActiveTextFilePath = (): string | undefined => {
+const getActiveTextualFilePath = (): string | undefined => {
 
   const document = vscode.window.activeTextEditor?.document;
 
@@ -19,4 +19,4 @@ const getActiveTextFilePath = (): string | undefined => {
 
 /* EXPORT */
 
-export default getActiveTextFilePath;
+export default getActiveTextualFilePath;

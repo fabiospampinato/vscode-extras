@@ -2,7 +2,7 @@
 /* IMPORT */
 
 import vscode from 'vscode';
-import getActiveTextFilePath from './get_active_text_file_path';
+import getActiveTextualFilePath from './get_active_textual_file_path';
 import {isObject} from './utils';
 
 /* MAIN */
@@ -18,7 +18,7 @@ const getActiveBinaryFilePath = (): string | undefined => {
   if ( !( uri instanceof vscode.Uri ) ) return;
 
   const binaryFilePath = uri.fsPath;
-  const textFilePath = getActiveTextFilePath ();
+  const textFilePath = getActiveTextualFilePath ();
 
   if ( binaryFilePath === textFilePath ) return;
 

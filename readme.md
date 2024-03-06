@@ -30,14 +30,14 @@ import {getActiveBinaryFilePath} from 'vscode-extras';
 const filePath = getActiveBinaryFilePath ();
 ```
 
-#### `getActiveTextFilePath`
+#### `getActiveTextualFilePath`
 
 Get the path of the currently active textual file, where textual means the file is being edited with a textual editor.
 
 ```ts
-import {getActiveTextFilePath} from 'vscode-extras';
+import {getActiveTextualFilePath} from 'vscode-extras';
 
-const filePath = getActiveTextFilePath ();
+const filePath = getActiveTextualFilePath ();
 ```
 
 #### `getConfig`
