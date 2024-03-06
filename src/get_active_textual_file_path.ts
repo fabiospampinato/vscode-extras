@@ -1,6 +1,7 @@
 
 /* IMPORT */
 
+import fs from 'node:fs';
 import vscode from 'vscode';
 
 /* MAIN */
@@ -11,9 +12,11 @@ const getActiveTextualFilePath = (): string | undefined => {
 
   if ( !document || document.isUntitled ) return;
 
-  const filePath = document.uri.fsPath;
+  const textualFilePath = document.uri.fsPath;
 
-  return filePath;
+  if ( !fs.existsSync ( textualFilePath ) ) return;
+
+  return textualFilePath;
 
 };
 
