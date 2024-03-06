@@ -10,6 +10,36 @@ npm install --save vscode-extras
 
 ## Usage
 
+#### `getActiveFilePath`
+
+Get the path of the currently active file, which could be a textual or binary file.
+
+```ts
+import {getActiveFilePath} from 'vscode-extras';
+
+const filePath = getActiveFilePath ();
+```
+
+#### `getActiveBinaryFilePath`
+
+Get the path of the currently active binary file, where binary means the file is not being edited with a textual editor.
+
+```ts
+import {getActiveBinaryFilePath} from 'vscode-extras';
+
+const filePath = getActiveBinaryFilePath ();
+```
+
+#### `getActiveTextFilePath`
+
+Get the path of the currently active textual file, where textual means the file is being edited with a textual editor.
+
+```ts
+import {getActiveTextFilePath} from 'vscode-extras';
+
+const filePath = getActiveTextFilePath ();
+```
+
 #### `getConfig`
 
 Get the configuration object for a given extension.

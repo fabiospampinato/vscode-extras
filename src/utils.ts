@@ -13,6 +13,12 @@ const isInsidePath = ( targetPath: string, basePath: string ): boolean => {
 
 };
 
+const isObject = ( value: unknown ): value is object => {
+
+  return ( typeof value === 'object' && value !== null );
+
+};
+
 /* EXPORT */
 
-export {isInsidePath};
+export {isInsidePath, isObject};
