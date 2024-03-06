@@ -8,7 +8,7 @@ import getActiveTextualFilePath from './get_active_textual_file_path';
 
 const getActiveFilePath = (): string | undefined => {
 
-  return getActiveBinaryFilePath () || getActiveTextualFilePath ();
+  return getActiveTextualFilePath () || getActiveBinaryFilePath ();
 
 };
 
