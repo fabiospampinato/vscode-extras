@@ -10,6 +10,18 @@ npm install --save vscode-extras
 
 ## Usage
 
+#### `alert`
+
+A convenience wrapper around `showInformationMessage`, `showWarningMessage` and `showErrorMessage`.
+
+```ts
+import {alert} from 'vscode-extras';
+
+alert.error ( 'Some error' );
+alert.info ( 'Some information' );
+alert.warn ( 'Some warning' );
+```
+
 #### `getActiveFilePath`
 
 Get the path of the currently active file, which could be either a textual or binary file.

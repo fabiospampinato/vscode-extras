@@ -1,6 +1,7 @@
 
 /* IMPORT */
 
+import alert from './alert';
 import getActiveFilePath from './get_active_file_path';
 import getActiveBinaryFilePath from './get_active_binary_file_path';
 import getActiveTextualFilePath from './get_active_textual_file_path';
@@ -12,4 +13,4 @@ import isInsiders from './is_insiders';
 
 /* EXPORT */
 
-export {getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getConfig, getGitRootPath, getProjectRootPath, getProjectRootPaths, isInsiders};
+export {alert, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getConfig, getGitRootPath, getProjectRootPath, getProjectRootPaths, isInsiders};
