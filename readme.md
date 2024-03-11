@@ -22,6 +22,16 @@ alert.info ( 'Some information' );
 alert.warn ( 'Some warning' );
 ```
 
+#### `exec`
+
+The re-exported function from [`tiny-exec`](https://github.com/fabiospampinato/tiny-exec), for conveniently executing a native binary.
+
+```ts
+import {exec} from 'vscode-extras';
+
+const {ok, code, stdout, stderr} = await exec ( 'echo', ['example'] );
+```
+
 #### `getActiveFilePath`
 
 Get the path of the currently active file, which could be either a textual or binary file.

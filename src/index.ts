@@ -2,6 +2,7 @@
 /* IMPORT */
 
 import alert from './alert';
+import exec from './exec';
 import getActiveFilePath from './get_active_file_path';
 import getActiveBinaryFilePath from './get_active_binary_file_path';
 import getActiveTextualFilePath from './get_active_textual_file_path';
@@ -18,4 +19,4 @@ import prompt from './prompt';
 
 /* EXPORT */
 
-export {alert, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getActiveFolderPath, getConfig, getGitRootPath, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInExternal, prompt};
+export {alert, exec, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getActiveFolderPath, getConfig, getGitRootPath, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInExternal, prompt};
