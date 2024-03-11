@@ -102,6 +102,16 @@ import {isInsiders} from 'vscode-extras';
 const insiders = isInsiders ();
 ```
 
+#### `openInExternal`
+
+A little wrapper around `vscode.env.openInExternal`, useful for opening a URL in the default browser.
+
+```ts
+import {openInExternal} from 'vscode-extras';
+
+openInExternal ( 'https://example.com' );
+```
+
 #### `prompt`
 
 A convenience wrapper around `showInformationMessage`, `showInputBox` and `showQuickPick`.
