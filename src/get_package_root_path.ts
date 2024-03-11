@@ -3,24 +3,21 @@
 
 import findUpPath from 'find-up-path';
 import path from 'node:path';
-import getActiveFilePath from './get_active_file_path';
-import getProjectRootPaths from './get_project_root_paths';
+import getActiveFolderPath from './get_active_folder_path';
 
 /* MAIN */
 
 const getPackageRootPath = (): string | undefined => {
 
-  const filePath = getActiveFilePath ();
-  const folderPaths = getProjectRootPaths ();
-  const startPath = filePath ? path.dirname ( filePath ) : folderPaths[0];
+  const folderPath = getActiveFolderPath ();
 
-  if ( !startPath ) return;
+  if ( !folderPath ) return;
 
-  const gitPath = findUpPath ( 'package.json', startPath );
+  const packagePath = findUpPath ( 'package.json', folderPath );
 
-  if ( !gitPath ) return;
+  if ( !packagePath ) return;
 
-  return path.dirname ( gitPath );
+  return path.dirname ( packagePath );
 
 };
 

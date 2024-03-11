@@ -3,20 +3,17 @@
 
 import findUpPath from 'find-up-path';
 import path from 'node:path';
-import getActiveFilePath from './get_active_file_path';
-import getProjectRootPaths from './get_project_root_paths';
+import getActiveFolderPath from './get_active_folder_path';
 
 /* MAIN */
 
 const getGitRootPath = (): string | undefined => {
 
-  const filePath = getActiveFilePath ();
-  const folderPaths = getProjectRootPaths ();
-  const startPath = filePath ? path.dirname ( filePath ) : folderPaths[0];
+  const folderPath = getActiveFolderPath ();
 
-  if ( !startPath ) return;
+  if ( !folderPath ) return;
 
-  const gitPath = findUpPath ( '.git', startPath );
+  const gitPath = findUpPath ( '.git', folderPath );
 
   if ( !gitPath ) return;
 

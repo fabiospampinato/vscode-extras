@@ -52,6 +52,16 @@ import {getActiveTextualFilePath} from 'vscode-extras';
 const filePath = getActiveTextualFilePath ();
 ```
 
+#### `getActiveFolderPath`
+
+Get the path of the currently active folder, meaning the folder containing the currently active file, or the project root.
+
+```ts
+import {getActiveFolderPath} from 'vscode-extras';
+
+const folderPath = getActiveFolderPath ();
+```
+
 #### `getConfig`
 
 Get the configuration object for a given extension.

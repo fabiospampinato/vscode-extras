@@ -5,6 +5,7 @@ import alert from './alert';
 import getActiveFilePath from './get_active_file_path';
 import getActiveBinaryFilePath from './get_active_binary_file_path';
 import getActiveTextualFilePath from './get_active_textual_file_path';
+import getActiveFolderPath from './get_active_folder_path';
 import getConfig from './get_config';
 import getGitRootPath from './get_git_root_path';
 import getPackageRootPath from './get_package_root_path';
@@ -17,4 +18,4 @@ import prompt from './prompt';
 
 /* EXPORT */
 
-export {alert, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getConfig, getGitRootPath, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInExternal, prompt};
+export {alert, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getActiveFolderPath, getConfig, getGitRootPath, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInExternal, prompt};
