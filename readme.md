@@ -102,6 +102,17 @@ import {isInsiders} from 'vscode-extras';
 const insiders = isInsiders ();
 ```
 
+#### `openInApp`
+
+A little wrapper around [`tiny-browser-open`](https://github.com/fabiospampinato/tiny-browser-open) and [`tiny-open`](https://github.com/fabiospampinato/tiny-open), for opening a file with a custom app.
+
+```ts
+import {openInApp} from 'vscode-extras';
+
+openInApp ( 'https://example.com', 'firefox' );
+openInApp ( '/path/to/project', 'Visual Studio Code' );
+```
+
 #### `openInExternal`
 
 A little wrapper around `vscode.env.openInExternal`, useful for opening a URL in the default browser.
