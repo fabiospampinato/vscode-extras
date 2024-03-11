@@ -72,6 +72,16 @@ import {getGitRootPath} from 'vscode-extras';
 const rootPath = getGitRootPath ();
 ```
 
+#### `getPackageRootPath`
+
+Infer the path of the nearest folder containing a `package.json` file, considering the currently open file also.
+
+```ts
+import {getPackageRootPath} from 'vscode-extras';
+
+const rootPath = getPackageRootPath ();
+```
+
 #### `getProjectRootPath`
 
 Infer the root path of the current project, considering the currently open file also.
