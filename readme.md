@@ -102,6 +102,19 @@ import {isInsiders} from 'vscode-extras';
 const insiders = isInsiders ();
 ```
 
+#### `prompt`
+
+A convenience wrapper around `showInformationMessage`, `showInputBox` and `showQuickPick`.
+
+```ts
+import {prompt} from 'vscode-extras';
+
+const boolean = await prompt.boolean ( 'Do you want to continue?' );
+const string = await prompt.string ( 'Wha is your name?' );
+const password = await prompt.password ( 'What is your password?' );
+const pick = await prompt.pick ( 'What is your favorite color?', ['red', 'green', 'blue'] );
+```
+
 ## License
 
 MIT © Fabio Spampinato

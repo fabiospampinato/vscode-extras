@@ -10,7 +10,8 @@ import getGitRootPath from './get_git_root_path';
 import getProjectRootPath from './get_project_root_path';
 import getProjectRootPaths from './get_project_root_paths';
 import isInsiders from './is_insiders';
+import prompt from './prompt';
 
 /* EXPORT */
 
-export {alert, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getConfig, getGitRootPath, getProjectRootPath, getProjectRootPaths, isInsiders};
+export {alert, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getConfig, getGitRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, prompt};
