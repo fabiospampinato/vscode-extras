@@ -14,9 +14,10 @@ import getProjectRootPath from './get_project_root_path';
 import getProjectRootPaths from './get_project_root_paths';
 import isInsiders from './is_insiders';
 import openInApp from './open_in_app';
+import openInEditor from './open_in_editor';
 import openInExternal from './open_in_external';
 import prompt from './prompt';
 
 /* EXPORT */
 
-export {alert, exec, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getActiveFolderPath, getConfig, getGitRootPath, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInExternal, prompt};
+export {alert, exec, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getActiveFolderPath, getConfig, getGitRootPath, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInEditor, openInExternal, prompt};

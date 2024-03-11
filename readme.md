@@ -143,6 +143,20 @@ openInApp ( 'https://example.com', 'firefox' );
 openInApp ( '/path/to/project', 'Visual Studio Code' );
 ```
 
+#### `openInEditor`
+
+A little wrapper around the built-in `vscode.open` command, with support for [`TextDocumentShowOptions`](https://code.visualstudio.com/api/references/vscode-api#TextDocumentShowOptions) options.
+
+```ts
+import vscode from 'vscode';
+import {openInEditor} from 'vscode-extras';
+
+openInEditor ( '/path/to/file', {
+  preview: false
+  viewVolumn: vscode.ViewColumn.Beside
+});
+```
+
 #### `openInExternal`
 
 A little wrapper around `vscode.env.openInExternal`, useful for opening a URL in the default browser.
