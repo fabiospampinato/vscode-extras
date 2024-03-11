@@ -143,6 +143,19 @@ openInApp ( 'https://example.com', 'firefox' );
 openInApp ( '/path/to/project', 'Visual Studio Code' );
 ```
 
+#### `openInDiffEditor`
+
+A little wrapper around the built-in `vscode.diff` command.
+
+```ts
+import {openInDiffEditor} from 'vscode-extras';
+
+const leftFilePath = '/path/to/left/file';
+const rightFilePath = '/path/to/right/file';
+
+openInDiffEditor ( leftFilePath, rightFilePath, 'Custom Title' );
+```
+
 #### `openInEditor`
 
 A little wrapper around the built-in `vscode.open` command, with support for [`TextDocumentShowOptions`](https://code.visualstudio.com/api/references/vscode-api#TextDocumentShowOptions) options.
