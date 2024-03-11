@@ -50,6 +50,16 @@ import {getConfig} from 'vscode-extras';
 const config = getConfig ( 'myExtension' );
 ```
 
+#### `getGitRootPath`
+
+Infer the path of the nearest git repository, considering the currently open file also.
+
+```ts
+import {getGitRootPath} from 'vscode-extras';
+
+const rootPath = getGitRootPath ();
+```
+
 #### `getProjectRootPath`
 
 Infer the root path of the current project, considering the currently open file also.
