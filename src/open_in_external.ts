@@ -5,9 +5,9 @@ import vscode from 'vscode';
 
 /* MAIN */
 
-const openInExternal = ( filePath: string ): void => {
+const openInExternal = ( url: string ): void => {
 
-  const uri = vscode.Uri.file ( filePath );
+  const uri = vscode.Uri.parse ( url );
 
   vscode.env.openExternal ( uri );
 
