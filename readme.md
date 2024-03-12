@@ -190,6 +190,17 @@ import {openInExternal} from 'vscode-extras';
 openInExternal ( 'https://example.com' );
 ```
 
+#### `openInWindow`
+
+Open a folder in a vscode window, either the current one or a new one.
+
+```ts
+import {openInWindow} from 'vscode-extras';
+
+openInWindow ( '/path/to/folder' ); // Open in current window
+openInWindow ( '/path/to/folder', true ); // Open in new window
+```
+
 #### `prompt`
 
 A convenience wrapper around `showInformationMessage`, `showInputBox` and `showQuickPick`.

@@ -18,8 +18,9 @@ import openInApp from './open_in_app';
 import openInDiffEditor from './open_in_diff_editor';
 import openInEditor from './open_in_editor';
 import openInExternal from './open_in_external';
+import openInWindow from './open_in_window';
 import prompt from './prompt';
 
 /* EXPORT */
 
-export {alert, exec, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getActiveFolderPath, getConfig, getGitRootPath, getPackage, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInDiffEditor, openInEditor, openInExternal, prompt};
+export {alert, exec, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getActiveFolderPath, getConfig, getGitRootPath, getPackage, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInDiffEditor, openInEditor, openInExternal, openInWindow, prompt};
