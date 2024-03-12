@@ -17,7 +17,7 @@ const prompt = {
 
   password: async ( message: string, value?: string ): Promise<string | undefined> => {
 
-    return await vscode.window.showInputBox ({ password: true, prompt: message, value } );
+    return await vscode.window.showInputBox ({ placeHolder: message, value, password: true } );
 
   },
 
