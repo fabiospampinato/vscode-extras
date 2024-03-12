@@ -9,6 +9,7 @@ import getActiveTextualFilePath from './get_active_textual_file_path';
 import getActiveFolderPath from './get_active_folder_path';
 import getConfig from './get_config';
 import getGitRootPath from './get_git_root_path';
+import getPackage from './get_package';
 import getPackageRootPath from './get_package_root_path';
 import getProjectRootPath from './get_project_root_path';
 import getProjectRootPaths from './get_project_root_paths';
@@ -21,4 +22,4 @@ import prompt from './prompt';
 
 /* EXPORT */
 
-export {alert, exec, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getActiveFolderPath, getConfig, getGitRootPath, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInDiffEditor, openInEditor, openInExternal, prompt};
+export {alert, exec, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getActiveFolderPath, getConfig, getGitRootPath, getPackage, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInDiffEditor, openInEditor, openInExternal, prompt};

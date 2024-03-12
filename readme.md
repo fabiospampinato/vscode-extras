@@ -92,6 +92,16 @@ import {getGitRootPath} from 'vscode-extras';
 const rootPath = getGitRootPath ();
 ```
 
+#### `getPackage`
+
+Get the content of the `package.json` file, as provided by [`find-up-json`](https://github.com/fabiospampinato/find-up-json), considering the currently open file also.
+
+```ts
+import {getPackage} from 'vscode-extras';
+
+const pkg = getPackage ();
+```
+
 #### `getPackageRootPath`
 
 Infer the path of the nearest folder containing a `package.json` file, considering the currently open file also.

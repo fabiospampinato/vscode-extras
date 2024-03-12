@@ -21,6 +21,7 @@
     "utilities"
   ],
   "dependencies": {
+    "find-up-json": "^2.0.4",
     "find-up-path": "^1.0.0",
     "tiny-browser-open": "^1.0.1",
     "tiny-exec": "^1.0.0",
