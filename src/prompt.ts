@@ -23,6 +23,8 @@ const prompt = {
 
   select: async <T extends string | vscode.QuickPickItem> ( message: string, values: T[] ): Promise<T | undefined> => {
 
+    if ( !values.length ) return;
+
     return await vscode.window.showQuickPick ( values, { placeHolder: message } );
 
   },
