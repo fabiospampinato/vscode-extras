@@ -14,7 +14,7 @@ const openInApp = ( filePath: string, app?: 'chrome' | 'firefox' | 'edge' | 'saf
 
   } else {
 
-    openPath ( filePath );
+    openPath ( filePath, { app } );
 
   }
 
