@@ -9,19 +9,19 @@ const alert = {
 
   /* API */
 
-  error: ( message: string ): void => {
+  error: ( message: string ): undefined => {
 
     vscode.window.showErrorMessage ( message );
 
   },
 
-  info: ( message: string ): void => {
+  info: ( message: string ): undefined => {
 
     vscode.window.showInformationMessage ( message );
 
   },
 
-  warn: ( message: string ): void => {
+  warn: ( message: string ): undefined => {
 
     vscode.window.showWarningMessage ( message );
 
