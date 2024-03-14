@@ -11,6 +11,7 @@ import getActiveUntitledFile from './get_active_untitled_file';
 import getConfig from './get_config';
 import getGitRootPath from './get_git_root_path';
 import getOpenFilesPaths from './get_open_files_paths';
+import getOpenBinaryFilesPaths from './get_open_binary_files_paths';
 import getOpenTextualFilesPaths from './get_open_textual_files_paths';
 import getOpenUntitledFiles from './get_open_untitled_files';
 import getPackage from './get_package';
@@ -27,4 +28,4 @@ import prompt from './prompt';
 
 /* EXPORT */
 
-export {alert, exec, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getActiveUntitledFile, getActiveFolderPath, getConfig, getGitRootPath, getOpenFilesPaths, getOpenTextualFilesPaths, getOpenUntitledFiles, getPackage, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInDiffEditor, openInEditor, openInExternal, openInWindow, prompt};
+export {alert, exec, getActiveFilePath, getActiveBinaryFilePath, getActiveTextualFilePath, getActiveUntitledFile, getActiveFolderPath, getConfig, getGitRootPath, getOpenFilesPaths, getOpenBinaryFilesPaths, getOpenTextualFilesPaths, getOpenUntitledFiles, getPackage, getPackageRootPath, getProjectRootPath, getProjectRootPaths, isInsiders, openInApp, openInDiffEditor, openInEditor, openInExternal, openInWindow, prompt};

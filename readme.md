@@ -115,6 +115,16 @@ import {getOpenFilesPaths} from 'vscode-extras';
 const filesPaths = getOpenFilesPaths ();
 ```
 
+#### `getOpenBinaryFilesPaths`
+
+Get the paths of all the currently open binary files, across all visible tab groups.
+
+```ts
+import {getOpenBinaryFilesPaths} from 'vscode-extras';
+
+const filesPaths = getOpenBinaryFilesPaths ();
+```
+
 #### `getOpenTextualFilesPaths`
 
 Get the paths of all the currently open textual files, across all visible tab groups.
