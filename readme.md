@@ -62,6 +62,19 @@ import {getActiveTextualFilePath} from 'vscode-extras';
 const filePath = getActiveTextualFilePath ();
 ```
 
+#### `getActiveUntitledFilePath`
+
+Get the current active file, if it's an untitled one.
+
+```ts
+import {getActiveUntitledFilePath} from 'vscode-extras';
+
+const file = getActiveUntitledFilePath ();
+
+file.path; // 'Untitled-1'
+file.content; // 'Some content'
+```
+
 #### `getActiveFolderPath`
 
 Get the path of the currently active folder, meaning the folder containing the currently active file, or the project root.
