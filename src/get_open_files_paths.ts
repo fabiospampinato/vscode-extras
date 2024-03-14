@@ -10,6 +10,7 @@ import {isObject, isUri} from './utils';
 const getOpenFilesPaths = (): string[] => {
 
   const filesPaths: string[] = [];
+  const filesPathsSet = new Set<string> ();
 
   for ( const tabGroup of vscode.window.tabGroups.all ) {
 
@@ -25,9 +26,11 @@ const getOpenFilesPaths = (): string[] => {
 
       const filePath = uri.fsPath;
 
+      if ( filesPathsSet.has ( filePath ) ) continue;
       if ( !fs.existsSync ( filePath ) ) continue;
 
       filesPaths.push ( filePath );
+      filesPathsSet.add ( filePath );
 
     }
 
