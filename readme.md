@@ -105,6 +105,16 @@ import {getGitRootPath} from 'vscode-extras';
 const rootPath = getGitRootPath ();
 ```
 
+#### `getOpenFilesPaths`
+
+Get the paths of all the currently open files, across all visible tab groups.
+
+```ts
+import {getOpenFilesPaths} from 'vscode-extras';
+
+const filesPaths = getOpenFilesPaths ();
+```
+
 #### `getPackage`
 
 Get the content of the `package.json` file, as provided by [`find-up-json`](https://github.com/fabiospampinato/find-up-json), considering the currently open file also.

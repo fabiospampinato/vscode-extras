@@ -2,6 +2,7 @@
 /* IMPORT */
 
 import path from 'node:path';
+import vscode from 'vscode';
 
 /* MAIN */
 
@@ -19,6 +20,12 @@ const isObject = ( value: unknown ): value is object => {
 
 };
 
+const isUri = ( value: unknown ): value is vscode.Uri => {
+
+  return ( value instanceof vscode.Uri );
+
+};
+
 /* EXPORT */
 
-export {isInsidePath, isObject};
+export {isInsidePath, isObject, isUri};
