@@ -9,6 +9,7 @@ import vscode from 'vscode';
 const getOpenTextualFilesPaths = (): string[] => {
 
   const filesPaths: string[] = [];
+  const filesPathsSet = new Set<string> ();
 
   for ( const {document} of vscode.window.visibleTextEditors ) {
 
@@ -16,9 +17,11 @@ const getOpenTextualFilesPaths = (): string[] => {
 
     const textualFilePath = document.uri.fsPath;
 
+    if ( filesPathsSet.has ( textualFilePath ) ) continue;
     if ( !fs.existsSync ( textualFilePath ) ) continue;
 
     filesPaths.push ( textualFilePath );
+    filesPathsSet.add ( textualFilePath );
 
   }
 
