@@ -62,14 +62,14 @@ import {getActiveTextualFilePath} from 'vscode-extras';
 const filePath = getActiveTextualFilePath ();
 ```
 
-#### `getActiveUntitledFilePath`
+#### `getActiveUntitledFile`
 
 Get the current active file, if it's an untitled one.
 
 ```ts
-import {getActiveUntitledFilePath} from 'vscode-extras';
+import {getActiveUntitledFile} from 'vscode-extras';
 
-const file = getActiveUntitledFilePath ();
+const file = getActiveUntitledFile ();
 
 file.path; // 'Untitled-1'
 file.content; // 'Some content'
@@ -123,6 +123,19 @@ Get the paths of all the currently open textual files, across all visible tab gr
 import {getOpenTextualFilesPaths} from 'vscode-extras';
 
 const filesPaths = getOpenTextualFilesPaths ();
+```
+
+#### `getOpenUntitledFiles`
+
+Get the currently open untitled files, across all visible tab groups.
+
+```ts
+import {getOpenUntitledFiles} from 'vscode-extras';
+
+const files = getOpenUntitledFiles ();
+
+files[0].path; // 'Untitled-1'
+files[0].content; // 'Some content'
 ```
 
 #### `getPackage`
