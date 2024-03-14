@@ -115,6 +115,16 @@ import {getOpenFilesPaths} from 'vscode-extras';
 const filesPaths = getOpenFilesPaths ();
 ```
 
+#### `getOpenTextualFilesPaths`
+
+Get the paths of all the currently open textual files, across all visible tab groups.
+
+```ts
+import {getOpenTextualFilesPaths} from 'vscode-extras';
+
+const filesPaths = getOpenTextualFilesPaths ();
+```
+
 #### `getPackage`
 
 Get the content of the `package.json` file, as provided by [`find-up-json`](https://github.com/fabiospampinato/find-up-json), considering the currently open file also.
