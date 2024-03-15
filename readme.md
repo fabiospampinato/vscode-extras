@@ -32,6 +32,16 @@ import {exec} from 'vscode-extras';
 const {ok, code, stdout, stderr} = await exec ( 'echo', ['example'] );
 ```
 
+#### `getActiveFileLanguage`
+
+Get the language of the currently active file, if it's a textual one.
+
+```ts
+import {getActiveFileLanguage} from 'vscode-extras';
+
+const language = getActiveFileLanguage ();
+```
+
 #### `getActiveFilePath`
 
 Get the path of the currently active file, which could be either a textual or binary file.
