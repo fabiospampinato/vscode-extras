@@ -23,8 +23,8 @@
   "dependencies": {
     "find-up-json": "^2.0.4",
     "find-up-path": "^1.0.0",
+    "nanoexec": "^1.0.0",
     "tiny-browser-open": "^1.0.1",
-    "tiny-exec": "^1.0.0",
     "tiny-open": "^1.1.1"
   },
   "devDependencies": {

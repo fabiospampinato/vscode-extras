@@ -1,7 +1,7 @@
 
 /* IMPORT */
 
-import exec from 'tiny-exec';
+import exec from 'nanoexec';
 
 /* EXPORT */
 

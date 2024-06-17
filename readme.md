@@ -24,7 +24,7 @@ alert.warn ( 'Some warning' );
 
 #### `exec`
 
-The re-exported function from [`tiny-exec`](https://github.com/fabiospampinato/tiny-exec), for conveniently executing a native binary.
+The re-exported function from [`nanoexec`](https://github.com/fabiospampinato/nanoexec), for conveniently executing a native binary.
 
 ```ts
 import {exec} from 'vscode-extras';
